@@ -2,12 +2,13 @@ using System.Data;
 using System.Data.Odbc;
 using Devart.Data.Universal;
 using FluentAssertions;
+using Xunit;
 
 namespace devart_odbc_filepath_issues
 {
     public class OdbcConnectionStringBuilderTest
     {
-        internal const string License = "your license here";
+        internal const string License = @"k0CkEFCuiCE5kzLrfcFyAfNrSfqJH8ovgwVLVzNejSELViDEcISCLSmAbaGzoYH90IuHpwUg8NWDV9olEQDWTKqkjJgCOvenpXDW9IMwVpr4nqtr5lAP3aDeGxWcM9i1JMsVx3KbYVSI/m3FULFnIz4TDP80RlBpCZkXd3tg25WqUtGJDvDqwtn+mJmgwH+gqr2F63wzPzE2P+eDYezo59Bp7QyWFaSqNIdDi8/scew1DT/YrrwZH2hIOP11CA09fm0VP+dRKAbsqI7KJrNHjPdJcsxCp/XglFpsw53FkkHCG4RehToO5+JPYwX1eoaD";
         public OdbcConnectionStringBuilderTest()
         {
             try
@@ -17,7 +18,7 @@ namespace devart_odbc_filepath_issues
             }
             catch (OdbcException)
             {
-                // Catch e
+                // Catch simple and continue knowing that the license key has been registered.
             }
         }
 
