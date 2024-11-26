@@ -23,9 +23,9 @@ namespace devart_odbc_filepath_issues
         }
 
         [Theory]
-        [InlineData(".\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")]
+        [InlineData(".\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")] // Success
         public void When_odbc_connection_open_should_work(string dbq)
         {
             var builder = new OdbcConnectionStringBuilder();
@@ -39,9 +39,9 @@ namespace devart_odbc_filepath_issues
         }
 
         [Theory]
-        [InlineData(".\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")]
+        [InlineData(".\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")] // Fail
         public void When_uni_connection_odbc_provider_open_should_work(string dbq)
         {
             var builder = new OdbcConnectionStringBuilder();
@@ -55,9 +55,9 @@ namespace devart_odbc_filepath_issues
         }
 
         [Theory]
-        [InlineData(".\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")]
-        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")]
+        [InlineData(".\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWithoutSpaces\\LasVegas.mdb")] // Success
+        [InlineData(".\\DataFolderWith Spaces\\LasVegas.mdb")] // Fail
         public void When_uni_connection_with_builder_open_should_work(string dbq)
         {
             var builder = new UniConnectionStringBuilder();
